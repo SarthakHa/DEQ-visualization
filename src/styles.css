@@ -1,0 +1,85 @@
+html {
+  background-color: #32363a;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.RK4Css {
+  background-color: #6d78ad;
+  align-content: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding-left: 4%;
+  padding-right: 2%;
+  width: 50%;
+}
+
+h1 {
+  color: #f6f7f7;
+  font-size: 400%;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding-top: 40px;
+  color: #f6f7f7;
+  position: relative;
+  padding-bottom: 30px;
+}
+label,
+input,
+textarea {
+  display: block;
+}
+input,
+textarea {
+  width: 500px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 10px;
+  font-family: "Sniglet", cursive;
+  font-size: 1em;
+  color: #676767;
+  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  border: solid 3px #c9d35d;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:focus,
+textarea:focus {
+  border: solid 3px #c9d35d;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+  overflow: auto;
+}
+input[type="submit"] {
+  background-color: #f90;
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 1.29em;
+  font-family: "Sniglet", cursive;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+label {
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding-left: 20px;
+}
