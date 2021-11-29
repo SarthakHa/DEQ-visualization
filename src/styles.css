@@ -7,7 +7,7 @@ html {
   text-align: center;
 }
 
-.RK4Css {
+.DEQCss {
   background-color: #6d78ad;
   align-content: center;
   border-radius: 10px;
@@ -15,6 +15,44 @@ html {
   padding-left: 4%;
   padding-right: 2%;
   width: 50%;
+  overflow: hidden;
+}
+
+.checklist {
+  border-radius: 5px;
+  margin: 5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  background-color: #6d78ad;
+  width: 20%;
+  float:left;
+  overflow: hidden;
+  vertical-align: center;
+}
+
+.methodLabel {
+  text-align: center;
+}
+
+.methodChecks {
+  width: initial;
+  border: initial;
+  border-radius: initial;
+  outline: initial;
+  padding: initial;
+  font-family: initial;
+  font-size: initial;
+  transition: initial;
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  border: initial;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
+  display: initial;
+  vertical-align: middle;
 }
 
 h1 {
@@ -35,6 +73,8 @@ input,
 textarea {
   display: block;
 }
+
+
 input,
 textarea {
   width: 500px;

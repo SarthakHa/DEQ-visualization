@@ -18,8 +18,23 @@ class InfoInput extends React.Component {
       deriv_func_status: "Good function",
       true_func: "2/((x^2)+(x0^2)+(2/y0))",
       true_func_to_send: "2/((x^2)+(x0^2)+(2/y0))",
-      true_func_status: "Good function"
+      true_func_status: "Good function",
+      epsilon: 0.00001,
+      epsilon_to_send: 0.00001,
+      epsilon_status: ""
     };
+  }
+
+  handleEpsilonChange = (e) => {
+    if (e.target.value === "") {
+      this.setState({ epsilon: e.target.value }, () => {});
+    } else if(e.target.value <= 0.0){
+      this.setState({ epsilon: e.target.value, epsilon_status: "(Re-enter, must be positive value)" }, () => {});
+    }else {
+      this.setState({ epsilon: e.target.value, epsilon_to_send: e.target.value, epsilon_status: "" }, () => {
+        this.onTrigger();
+      });
+    }
   }
 
   handleNChange = (e) => {
@@ -180,7 +195,8 @@ class InfoInput extends React.Component {
       this.state.y0_to_send,
       this.state.x_final_to_send,
       this.state.deriv_func_to_send,
-      this.state.true_func_to_send
+      this.state.true_func_to_send,
+      this.state.epsilon_to_send
     );
   };
 
@@ -218,6 +234,13 @@ class InfoInput extends React.Component {
             value={this.state.x_final}
             onChange={this.handlexfinalChange}
           />
+          <label>epsilon - threshold for Runge-Kutta Fehlberg Method {this.state.epsilon_status}</label>
+          <input
+            type="number"
+            required
+            value={this.state.epsilon}
+            onChange={this.handleEpsilonChange}
+          />
           <label>Derivative function ({this.state.deriv_func_status})</label>
           <input
             type="text"
@@ -225,13 +248,13 @@ class InfoInput extends React.Component {
             value={this.state.deriv_func}
             onChange={this.handleDerivFuncChange}
           />
-          <label>True solution function ({this.state.true_func_status})</label>
+          {/*<label>True solution function ({this.state.true_func_status})</label>
           <input
             type="text"
             required
             value={this.state.true_func}
             onChange={this.handleTrueFuncChange}
-          />
+          />*/}
         </form>
       </div>
     );
