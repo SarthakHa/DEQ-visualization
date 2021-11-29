@@ -10,7 +10,7 @@ View this react app on netlify by clicking on the badge below.
 **Scroll down on the webpage to edit the function that is being approximated.**
 
 Here are the parameters and what they mean:
-- n = number of steps to take. Is used to calculate h (step size) as <img src="https://render.githubusercontent.com/render/math?math=\frac{x-final - x-initial}{ / 2}">
+- n = number of steps to take. Is used to calculate h (step size) as <img src="https://render.githubusercontent.com/render/math?math=\frac{x-final - x-initial}{ 2}">
 - x-initial = Initial value of x at starting point
 - y-initial = Initial value of y at starting point
 - x-final = point at which we are trying to estimate y
