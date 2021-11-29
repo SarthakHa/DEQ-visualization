@@ -18,6 +18,10 @@ html {
   overflow: hidden;
 }
 
+.checklistTitle {
+  text-align: center;
+}
+
 .checklist {
   border-radius: 5px;
   margin: 5%;

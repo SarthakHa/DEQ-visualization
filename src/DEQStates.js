@@ -66,6 +66,29 @@ class DEQStates extends React.Component {
 
     let rkf_array = rkf_step(f, x0, y0, x_final, n, epsilon)
 
+    let methodLabels = []
+    let index = 0;
+    if(euler === true){
+      methodLabels[index] = { name: "Euler", symbol: { fill: "#4c9ca0" } };
+      index++;
+    }
+    if(midpoint === true){
+      methodLabels[index] = { name: "Midpoint", symbol: { fill: "#c9d45c" } };
+      index++;
+    }
+    if(rk3 === true){
+      methodLabels[index] = { name: "RK 3", symbol: { fill: "#51cda0" } };
+      index++;
+    }
+    if(rk4 === true){
+      methodLabels[index] = { name: "RK 4", symbol: { fill: "#df7970" } };
+      index++;
+    }
+    if(rkf === true){
+      methodLabels[index] = { name: "RKF", symbol: { fill: "#02796b" } };
+      index++;
+    }
+
     /*const true_y = [];
     let h = (x_final - x0) / n;
     let nAdd = n;
@@ -88,9 +111,9 @@ class DEQStates extends React.Component {
           //containerComponent={<VictoryVoronoiContainer />}
         >
           <VictoryLegend
-            x={120}
+            x={200} //120
             y={20}
-            itemsPerRow={3}
+            itemsPerRow={2}
             title="Legend"
             centerTitle
             orientation="horizontal"
@@ -99,14 +122,15 @@ class DEQStates extends React.Component {
               border: { stroke: "black", fill: "white" },
               title: { fill: "black", fontSize: 15 }
             }}
-            data={[
+            /*data={[
               //{ name: "True Function", symbol: { fill: "#51cda0" } },
               (midpoint === true) && ({ name: "Midpoint", symbol: { fill: "#c9d45c" } }),
               (euler === true) && ({ name: "Euler", symbol: { fill: "#4c9ca0" } }),
               (rk3 === true) && ({ name: "RK 3", symbol: { fill: "#51cda0" } }),
               (rk4 === true) && ({ name: "RK 4", symbol: { fill: "#df7970" } }),
               (rkf === true) && ({ name: "RKF", symbol: { fill: "#02796b" } })
-            ]}
+            ]}*/
+            data={methodLabels}
           />
           
           <VictoryAxis

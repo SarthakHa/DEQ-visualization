@@ -33,6 +33,7 @@ class MethodsForm extends React.Component {
         return (
             <div>
                 <div>
+                <h2 className="checklistTitle">Methods:</h2>
                 <label className="methodLabel">
                     <input
                         type="checkbox"
