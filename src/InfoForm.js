@@ -8,8 +8,11 @@ class InfoInput extends React.Component {
     this.state = {
       n: 2,
       x_final: 2.0,
+      x_final_to_send: 2.0,
       x0: 0.0,
+      x0_to_send: 0.0,
       y0: 1.0,
+      y0_to_send: 1.0,
       deriv_func: "-x * y^2",
       deriv_func_to_send: "-x * y^2",
       deriv_func_status: "Good function",
@@ -26,21 +29,36 @@ class InfoInput extends React.Component {
   };
 
   handlex0Change = (e) => {
-    this.setState({ x0: e.target.value }, () => {
-      this.onTrigger();
-    });
+    if (e.target.value === "") {
+      this.setState({ x0: e.target.value }, () => {});
+    } else {
+      this.setState({ x0: e.target.value, x0_to_send: e.target.value }, () => {
+        this.onTrigger();
+      });
+    }
   };
 
   handley0Change = (e) => {
-    this.setState({ y0: e.target.value }, () => {
-      this.onTrigger();
-    });
+    if (e.target.value === "") {
+      this.setState({ y0: e.target.value }, () => {});
+    } else {
+      this.setState({ y0: e.target.value, y0_to_send: e.target.value }, () => {
+        this.onTrigger();
+      });
+    }
   };
 
   handlexfinalChange = (e) => {
-    this.setState({ x_final: e.target.value }, () => {
-      this.onTrigger();
-    });
+    if (e.target.value === "") {
+      this.setState({ x_final: e.target.value }, () => {});
+    } else {
+      this.setState(
+        { x_final: e.target.value, x_final_to_send: e.target.value },
+        () => {
+          this.onTrigger();
+        }
+      );
+    }
   };
 
   handleDerivFuncChange = (e) => {
@@ -158,9 +176,9 @@ class InfoInput extends React.Component {
   onTrigger = () => {
     this.props.parentCallback(
       this.state.n,
-      this.state.x0,
-      this.state.y0,
-      this.state.x_final,
+      this.state.x0_to_send,
+      this.state.y0_to_send,
+      this.state.x_final_to_send,
       this.state.deriv_func_to_send,
       this.state.true_func_to_send
     );
