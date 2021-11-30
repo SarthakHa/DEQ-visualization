@@ -23,3 +23,9 @@ Here are the parameters and what they mean:
 - Runge-Kutta 3rd Order (RK3) method
 - Runge-Kutta 4th Order (RK4) method
 - Runge-Kutta-Fehlberg (RK45/RKF) method
+
+## Demo
+
+|Demo of different approximations|![Demo-DEQ.gif](https://i.postimg.cc/xdwZS99y/Demo-DEQCropped.gif)|
+|--|--|
+|Different methods available|![Screenshot-2021-11-30-at-11-33-13-AM.png](https://i.postimg.cc/1zdQVxsf/Screenshot-2021-11-30-at-11-33-13-AM.png)|
